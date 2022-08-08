@@ -1,0 +1,299 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--my-blue);
+}
+
+:root {
+    --med-font-size: 1.3rem;
+    --my-blue: #0d45e4;
+    --page-pad: 2rem 3rem;
+}
+
+nav {
+    background-color: var(--my-blue);
+}
+
+main {
+    padding: 0;
+    margin: 3rem 0;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.7rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a, p {
+    text-decoration: none;
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    padding: 0 .5rem;
+}
+
+nav a {
+    color: white;
+}
+
+.nav {
+    font-size: 1.7rem;
+}
+
+.navbar-start a, .navbar-end a {
+    font-size: 1.2rem;
+}
+
+.navbar-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar-end {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.navbar-end li, .navbar-start li {
+    display: inline-block;
+    padding: 0 .3rem;
+    letter-spacing: 0;
+    word-spacing: 0;
+}
+
+.navbar li a:hover {
+    transition: all 0.3s ease ;
+    padding: 0 .3rem ;
+    text-decoration: underline;
+}
+
+#user-email {
+    border: 1px solid white;
+    color: white;
+    padding: .4rem;
+    border-radius: .5rem;
+}
+
+.mainmenubtn {
+    background-color: var(--my-blue);
+    color: white;
+}
+.mainmenubtn:hover {
+    background-color: blue;
+}
+.dropdown {
+    /* position: relative; */
+    display: inline-block;
+    background-color: var(--my-blue);
+}
+.dropdown-child {
+    color: white;
+    display: none;
+    border: 1px solid white;
+    background-color: var(--my-blue);
+}
+.dropdown-child a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+}
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+.intro {
+    text-align: center;
+}
+
+.home {
+    display: flex;
+    justify-content:space-around;
+}
+
+.home h2 {
+    font-size: 2rem;
+}
+
+.home-note {
+    padding: 1rem;
+}
+
+div.home-form {
+    text-align: center;
+    padding: 1rem;
+    background-color: white;
+}
+
+input, select {
+    width: 30rem;
+    font-size: var(--med-font-size);
+    height: 2rem;
+    padding: 0 .3em;
+}
+
+select {
+    width: fit-content;
+}
+
+label {
+    font-size: var(--med-font-size);
+    display: block;
+} 
+
+.form-group button {
+    font-size: var(--med-font-size);
+    width: fit-content;
+    padding: .7rem;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: var(--my-blue);
+    border: 0;
+    color: white;
+}
+
+.form-group #date {
+    width: fit-content;
+}
+
+.form-group #email {
+    width: 23rem;
+}
+
+textarea {
+    width: 30rem;
+    height: 15rem;
+    padding: .8rem;
+}
+
+.letter-form {
+    padding: 0 1rem;
+}
+
+.user-form, .letter-form {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    background-color: white;
+    padding: 1rem;
+}
+
+.user-form .form-group {
+    padding: 1rem;
+}
+
+.user-form .form-group input {
+    width: 20rem;
+}
+
+.user-form input {
+    display: inline-block;
+}
+
+.helptext {
+    display: block;
+    font-size: .8rem;
+}
+
+.errorlist {
+    margin: 0 auto  ;
+    color: white;
+    padding: .5rem;
+    font-size: var(--med-font-size);
+    background-color: rgb(238, 56, 24);
+    width: fit-content;
+    text-align: center;
+}
+
+
+.letter-list {
+    display: flex;
+    flex-flow: column wrap;
+    width: fit-content;
+    padding: .5rem;
+}
+
+.letters, .p-letters {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: .5rem;
+    border: 1px solid black;
+    border-radius: .5rem;
+    margin: 2rem 0;
+}
+
+.letters-page a , .letters-page p {
+    font-size: 1.2rem;
+}
+
+.letters-page {
+    background-color:white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.delivered-letters {
+    border: 1px solid darkgray;
+    padding: 1rem ;
+}
+
+.audience {
+    float: right;
+    padding: .1px;
+    border-radius: .5rem;
+    background-color: orange;
+    color: lightgoldenrodyellow;
+}
+
+.public-letters {
+    background-color: white;
+    padding: 2rem 5rem;
+}
+
+.public-letters h1 {
+    padding: var(--page-pad);
+    background-color: dodgerblue;
+}
+
+.p-letters {
+    border: none;
+    padding: .5rem 5rem;
+}
+
+.p-letters:hover {
+    border: 1px solid darkgray;
+}
+
+.p-letters span {
+    font-weight: bold;
+}
+
+.d-letter {
+    background-color: white;
+    padding: var(--page-pad);
+}
+
+.d-letter h1 {
+    background-color: dodgerblue;
+    padding: var(--page-pad);
+}
+
+.d-letter h1 span {
+    font-size: 1rem;
+    color: whitesmoke;
+}
+
+.d-letter .letter {
+    margin: 3rem auto;
+    width: 70%;
+    font-size: var(--med-font-size);
+}

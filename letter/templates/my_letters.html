@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="letters-page">
+    <div class="letter-list">
+        <h3>My Future letters</h3>
+        <h3>These letters have travelled to the future and are waiting for you.</h3>
+        {% for letters in object_list %}
+            <div class="letters">
+                <span>{{ letters.date_posted.date }} &rightarrow; {{ letters.date }}</span>
+                <p> 
+                    <a href="{{ letters.get_absolute_url }}"> {{ letters }} </a>  <span class="audience">{{ letters.audience }}</span><br>
+                    {{ letters.message|truncatewords:10|safe }}
+                </p>
+            </div>
+        {% empty %}
+            <h1> You have no future letters yet. </h1>
+        {% endfor %}
+    </div>
+    <div class="delivered-letters">
+        <h3>Delivered Letters</h3>
+        {% for letters in delivered_letters %}
+            <a href="{{ letters.get_absolute_url }}">{{ letters }}</a><br>
+            {{ letters.message|truncatewords:10|safe }} <br>
+        {% empty %}
+            <h4>No letters delivered yet. But when they arrive from the past, they will be available here.</h4>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

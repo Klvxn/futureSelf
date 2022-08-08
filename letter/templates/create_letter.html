@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="letter-form">
+    <h2> Your Future letter</h2>
+    <form action="" method="post" class="form-group">
+        {% csrf_token %}
+        {% comment %} {{ form.media }} {% endcomment %}
+        {{ form.as_p  }}
+        <button> Send to the future </button>
+    </form>
+</div>
+{% endblock %}

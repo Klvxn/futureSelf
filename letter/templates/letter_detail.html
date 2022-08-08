@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="d-letter">
+    <h1> <span>Time travelled: {{ object.get_time_travelled }}</span> <br>
+        A Letter from {{ object.date_posted.date }} <br>
+        <span>{{ object.date_posted.date }} &rightarrow; {{ object.date }}</span></h1>
+    <div class="letter">
+        <h4> {{ object.title|upper }} </h4>
+        <p> {{ object.message|safe }} </p>
+        <hr>
+        <h4>Audience</h4>
+        This Letter is set to: {{ object.audience }} <br>
+        {% if object.audience == private %}
+            Only you would be able to see this email.
+        {% else %}
+            Other users will be able to see the content of this letter but your email address won't be visible to the public.
+        {% endif %}
+
+        {% if request.user == object.user %}
+            <hr>
+            <h4>Delete this Letter</h4>
+            This action cannot be undone.              
+            <form action="" method="post">
+                {% csrf_token %}
+                <button> Delete </button>
+            </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

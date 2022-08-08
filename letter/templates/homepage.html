@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<div class="home">
+    <div class="home-note">
+        <h1> Write a letter to the future</h1>
+        <p> <blockquote>I love this. I've sent myself 5 letters so far and every year it's a surprise. Because I forget so easily. It turns into such a deep reflective process, that I usually weep and laugh while I write. </blockquote>
+        - Mona Lisa <br>
+        Member since 2022 </p>
+    </div>
+    <div class="home-form">
+        <h2> Your Future letter </h2>
+        <form action="" method="post" class="form-group">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button>Send to the future</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

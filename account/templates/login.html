@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="/static/letter/css/base.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <a class="nav" href="{% url 'letter:home' %}"> futureSelf </a>
+            <div class="navbar-start">
+                <ul>
+                    <li><a href="{% url 'letter:public_letters' %}">Read public letters</a></li>
+                    <li><a href="">Blog</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <ul>    
+                    <li><a href="{% url 'account:signup' %}">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="user-form">
+                <h1>Login</h1>
+                <form action="" method="post" class="form-group">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <p> <a href="">Forgotten password?</a></p>
+                    <button>Login</button>
+                    <p>Don't have an account? <a href="{% url 'account:signup' %}">Sign up</a></p>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

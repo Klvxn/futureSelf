@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    padding: .5rem;
+    background-color: dodgerblue;
+}
+
+ul {
+    list-style-type: none;
+}
+
+main {
+    padding: 0 .5rem;
+    border: 1px solid blue;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.home {
+    font-size: 2rem;
+    color: white;
+}
+
+ul.links {
+    float: right;
+    margin: 0;
+    padding: .2rem 0;
+}
+
+.links li {
+    display: inline-block;
+    padding: 0 .5rem;
+}
+
+.links li a:hover {
+    color: white;
+    transition: ease-in 450ms;
+    border: 1px solid ;
+}
+
+.intro {
+    text-align: center;
+}
