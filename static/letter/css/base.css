@@ -10,10 +10,6 @@ body {
     --page-pad: 2rem 3rem;
 }
 
-nav {
-    background-color: var(--my-blue);
-}
-
 main {
     padding: 0;
     margin: 3rem 0;
@@ -60,12 +56,14 @@ nav a:hover {
 .navbar-start {
     display: flex;
     justify-content: flex-start;
+    padding-top: .5rem ;
 }
 
 .navbar-end {
     display: flex;
     justify-content: flex-end;
     flex-grow: 1;
+    padding-top: .5rem;
 }
 
 .navbar-end li, .navbar-start li {
@@ -82,8 +80,8 @@ nav a:hover {
 #user-email {
     border: 1px solid white;
     color: white;
-    padding: .4rem;
-    border-radius: .5rem;
+    padding: .2rem;
+    background-color: var(--my-blue);
 }
 
 .intro {

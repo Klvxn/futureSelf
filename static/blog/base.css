@@ -81,8 +81,9 @@ nav a:hover {
 
 #user-email {
     border: 1px solid white;
-    padding: .4rem;
-    border-radius: .5rem;
+    padding: .2rem;
+    background-color: var(--my-blue);
+    color: white;
 }
 
 .all_blogs h1 {
