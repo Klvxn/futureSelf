@@ -49,7 +49,7 @@ class LettersListView(LoginRequiredMixin, generic.ListView):
     template_name = 'my_letters.html'
 
     def get_queryset(self):
-        queryset = Letter.objects.filter(user=self.request.user)
+        queryset = Letter.objects.filter(user=self.request.user, delivered=False)
         return queryset
 
     def get_context_data(self, **kwargs):

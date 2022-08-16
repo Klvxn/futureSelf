@@ -1,0 +1,25 @@
+{% extends 'blog_base.html' %}
+
+
+{% block content %}
+<div class="all_blogs">
+    <h1>Blogs
+        <div> <a href="{% url 'blog:blog_create' %}">Add Blog</a></div>
+    </h1>
+    {% if messages %}
+        <div class="alert alert-success alert-dismissble fade show" role="alert">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+            <button type="button" class="btn-close " data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endif %}
+    {% for blog in blogs_list %}
+    <div class="blogs">
+        <a href="{{ blog.get_absolute_url }}"> {{ blog }}</a><br>
+        <span>{{ blog.content|truncatewords:12 }}</span><br>
+        <span id="date_posted">{{ blog.date_posted.date|timesince }} ago</span>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

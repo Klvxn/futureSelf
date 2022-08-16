@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 
-from celery.schedules import crontab
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -44,10 +43,10 @@ INSTALLED_APPS = [
     # My apps
     'account.apps.AccountConfig',
     'letter.apps.LetterConfig',
-    # 'blog.apps.BlogConfig'
+    'blog.apps.BlogConfig',
 
-    # Others
-    # 'ckeditor'
+    # Other apps
+    # 'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -145,8 +144,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Emails
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # EMAIL_HOST = 'smtp.mailgun.org'
-# EMAIL_HOST_USER = 'postmaster@sandboxa93cac7080d246b3b59f96f5c8cf872f.mailgun.org'
-# EMAIL_HOST_PASSWORD = '51b4368c91360c50c39f32c603fd1e04-1b3a03f6-2a559a2e'
+# EMAIL_HOST_USER = 'safe-space.mailgun.org'
+# EMAIL_HOST_PASSWORD = 'safe-space'
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'futureSelf@mailgun.org'

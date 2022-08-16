@@ -1,0 +1,21 @@
+{% extends 'blog_base.html' %}
+
+
+{% block content %}
+<div class="blog_detail">
+    <h1> {{ blog.title }} </h1>   
+    <div>
+        {{ blog.writer.get_full_name }} <br>
+        {{ blog.date_posted.date }}
+    </div>
+    <div class="blog_content">
+        <p>{{ blog.content }}</p>
+    </div>
+    <div>
+        {% if request.user == blog.writer %}
+            <a href="{% url 'blog:blog_edit' blog.slug %}">Edit</a>
+            <a href="{% url 'blog:blog_delete' blog.slug %}">Delete</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

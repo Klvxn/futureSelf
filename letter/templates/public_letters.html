@@ -3,13 +3,12 @@
 
 {% block content %}
 <div class="public-letters">
-    <h1 >Public Letters from the past.</h1>
+    <h1>Public Letters from the past.</h1>
     {% for letters in object_list %}
         <div class="p-letters">
             <span> A Letter from {{ letters.date_posted.date }}</span> <br>
             Time-travelled: {{ letters.get_time_travelled }}
-            <p> 
-                user - {{ letters.get_fake_id }} <br>
+            <p>
                 <a href="{{ letters.get_absolute_url }}"> {{ letters }} </a> <br>
                 {{ letters.message|truncatewords:30 }}
             </p>

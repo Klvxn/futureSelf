@@ -32,7 +32,6 @@ a, p {
     text-decoration: none;
 }
 
-
 /* Navbar */
 .navbar {
     display: flex;
@@ -43,10 +42,15 @@ a, p {
 
 nav a {
     color: white;
+    text-decoration: none;
 }
 
 .nav {
     font-size: 1.7rem;
+}
+
+nav a:hover {
+    color: white;
 }
 
 .navbar-start a, .navbar-end a {
@@ -66,9 +70,7 @@ nav a {
 
 .navbar-end li, .navbar-start li {
     display: inline-block;
-    padding: 0 .3rem;
-    letter-spacing: 0;
-    word-spacing: 0;
+    padding: .5rem .3rem;
 }
 
 .navbar li a:hover {
@@ -82,34 +84,6 @@ nav a {
     color: white;
     padding: .4rem;
     border-radius: .5rem;
-}
-
-.mainmenubtn {
-    background-color: var(--my-blue);
-    color: white;
-}
-.mainmenubtn:hover {
-    background-color: blue;
-}
-.dropdown {
-    /* position: relative; */
-    display: inline-block;
-    background-color: var(--my-blue);
-}
-.dropdown-child {
-    color: white;
-    display: none;
-    border: 1px solid white;
-    background-color: var(--my-blue);
-}
-.dropdown-child a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    font-size: 1rem;
-}
-.dropdown:hover .dropdown-child {
-    display: block;
 }
 
 .intro {
@@ -143,7 +117,7 @@ input, select {
 }
 
 select {
-    width: fit-content;
+    width: auto;
 }
 
 label {
@@ -153,8 +127,6 @@ label {
 
 .form-group button {
     font-size: var(--med-font-size);
-    width: fit-content;
-    padding: .7rem;
     font-size: 1.5rem;
     text-align: center;
     background-color: var(--my-blue);
@@ -163,7 +135,7 @@ label {
 }
 
 .form-group #date {
-    width: fit-content;
+    width: auto;
 }
 
 .form-group #email {
@@ -217,13 +189,11 @@ textarea {
 
 
 .letter-list {
-    display: flex;
-    flex-flow: column wrap;
-    width: fit-content;
-    padding: .5rem;
+    padding: 1rem;
+    flex-grow: 1;
 }
 
-.letters, .p-letters {
+.letters, .p-letters, .dlvd-letter {
     font-family:Georgia, 'Times New Roman', Times, serif;
     padding: .5rem;
     border: 1px solid black;
@@ -242,16 +212,23 @@ textarea {
 }
 
 .delivered-letters {
-    border: 1px solid darkgray;
     padding: 1rem ;
+    flex-grow: 1;
 }
 
-.audience {
+.dlvd-letter  {
+    /* font-size: .8rem; */
+}
+
+.dlvd-letter {
+    flex-grow: 1;/* width: 30rem; */
+
+}
+
+.dlvd-letter .audience, .letter-list .audience {
     float: right;
-    padding: .1px;
-    border-radius: .5rem;
-    background-color: orange;
-    color: lightgoldenrodyellow;
+    font-family: serif;
+    font-size: .7rem;
 }
 
 .public-letters {

@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --med-font-size: 1.3rem;
+    --my-blue: #0d45e4;
+    --page-pad: 2rem 3rem;
+}
+
+nav {
+    background-color: var(--my-blue);
+}
+
+main {
+    padding: 0;
+    margin: 3rem 0;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.7rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    padding: .5rem ;
+}
+
+nav a {
+    color: white;
+}
+
+.nav {
+    font-size: 1.7rem;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.navbar-start a, .navbar-end a {
+    font-size: 1.2rem;
+}
+
+.navbar-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar-end {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.navbar-end li, .navbar-start li {
+    display: inline-block;
+    padding: .3rem ;
+    letter-spacing: 0;
+    word-spacing: 0;
+}
+
+.navbar li a:hover {
+    transition: all 0.3s ease ;
+    padding: 0 .3rem ;
+    text-decoration: underline;
+}
+
+#user-email {
+    border: 1px solid white;
+    padding: .4rem;
+    border-radius: .5rem;
+}
+
+.all_blogs h1 {
+    background-color: dodgerblue;
+    padding: 2rem 3rem;
+}
+
+.all_blogs h1 div  {
+    font-size: var(--med-font-size);
+    text-align: right;
+    color: white;
+}
+
+h1 a {
+    color: white;
+}
+
+.all_blogs {
+    padding: 0 4rem;
+}
+
+.blogs {
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.blogs:hover {
+    border: 1px solid darkgray;
+}
+
+.blogs a {
+    font-size: 1.5rem;
+}
+
+.alert button {
+    float: right;
+}
+
+#date_posted {
+    font-size: .8rem;
+    color: darkgray;
+}
+
+.blog_detail {
+    padding: 0 3rem;
+}
+
+.blog_content {
+    padding: 1.5rem 0;
+    font-size: var(--med-font-size);
+}
+
+.blog_create, .blog_edit {
+    padding: 0  3rem;
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+}
+
+.blog_form {
+    margin: 0 auto;
+    width: max-content;
+}
+
+.blog_form label {
+    display: block;
+    text-align: center;
+    font-size: var(--med-font-size);
+}
+
+.blog_form input {
+    width: 40rem;
+    height: 2rem;
+    
+}
+
+.blog_form textarea {
+    font-size: 1.3rem;
+    width: 40rem;
+    height: 25rem;
+}
+
+.blog_form button {
+    text-align: center;
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+    padding: .5rem;
+    font-size: var(--med-font-size);
+}

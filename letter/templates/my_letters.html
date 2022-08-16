@@ -4,15 +4,17 @@
 {% block content %}
 <div class="letters-page">
     <div class="letter-list">
-        <h3>My Future letters</h3>
-        <h3>These letters have travelled to the future and are waiting for you.</h3>
+        <h3>Travelling Letters</h3>
         {% for letters in object_list %}
             <div class="letters">
-                <span>{{ letters.date_posted.date }} &rightarrow; {{ letters.date }}</span>
+                <p>
+                    <b> {{ letters.date_posted.date }} &rightarrow; {{ letters.date }}</b> <span class="audience badge bg-info p-1">{{ letters.audience }}</span>
+                </p>
                 <p> 
-                    <a href="{{ letters.get_absolute_url }}"> {{ letters }} </a>  <span class="audience">{{ letters.audience }}</span><br>
+                    <a href="{{ letters.get_absolute_url }}"> {{ letters }} </a><br>
                     {{ letters.message|truncatewords:10|safe }}
                 </p>
+                Travelling
             </div>
         {% empty %}
             <h1> You have no future letters yet. </h1>
@@ -21,8 +23,16 @@
     <div class="delivered-letters">
         <h3>Delivered Letters</h3>
         {% for letters in delivered_letters %}
-            <a href="{{ letters.get_absolute_url }}">{{ letters }}</a><br>
-            {{ letters.message|truncatewords:10|safe }} <br>
+            <div class="dlvd-letter">
+                <p>
+                    <b> {{ letters.date_posted.date }} &rightarrow; {{ letters.date }}</b> <span class="audience badge bg-info p-1">{{ letters.audience }}</span>
+                </p>
+                <p> 
+                    <a href="{{ letters.get_absolute_url }}">{{ letters }}</a><br>
+                    {{ letters.message|truncatewords:10|safe }}
+                </p>
+                <span>Time-travelled: {{ letters.get_time_travelled }}</span>
+            </div>
         {% empty %}
             <h4>No letters delivered yet. But when they arrive from the past, they will be available here.</h4>
         {% endfor %}
